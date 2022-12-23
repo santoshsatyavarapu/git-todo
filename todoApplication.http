@@ -1,0 +1,34 @@
+get http://localhost:3000/todos/?=Buy
+###
+get http://localhost:3000/todos/1
+
+
+
+###
+
+post http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-12-22"
+}
+
+
+###
+delete http://localhost:3000/todos/6
+
+
+###
+
+get http://localhost:3000/agenda/?date=2021-1-12 
+
+###
+put http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{ "dueDate": "2021-13-12" }
